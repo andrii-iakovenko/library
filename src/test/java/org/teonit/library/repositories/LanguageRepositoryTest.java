@@ -1,4 +1,4 @@
-package org.teonit.library.model.repositories;
+package org.teonit.library.repositories;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
