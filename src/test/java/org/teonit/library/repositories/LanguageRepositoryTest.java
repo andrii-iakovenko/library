@@ -13,7 +13,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 import org.teonit.library.config.TestApplicationConfig;
 import org.teonit.library.domain.Language;
-import org.teonit.library.repositories.LanguageRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {TestApplicationConfig.class})

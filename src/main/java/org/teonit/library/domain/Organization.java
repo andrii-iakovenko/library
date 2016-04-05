@@ -1,49 +1,41 @@
 package org.teonit.library.domain;
 
 import org.neo4j.ogm.annotation.GraphId;
-import org.neo4j.ogm.annotation.Index;
 import org.neo4j.ogm.annotation.NodeEntity;
 
 /**
- * This class represents language.
+ * This class represents organization such as a school, NGO, corporation, club,
+ * etc.
  *
+ * 
+ * {@link https://schema.org/Organization}
+ * 
  * @author Andrii Iakovenko
  *
  */
 @NodeEntity
-public class Language {
+public class Organization {
 
 	@GraphId
 	private Long id;
 
-	@Index(unique = true)
-	private String code;
-
 	private String name;
 
 	/**
-	 * Create a new instance of {@code Language}
+	 * Create a new instance of {@code Organization}
 	 *
 	 */
-	public Language() {
+	public Organization() {
 	}
 
 	/**
-	 * Create a new instance of {@code Language}
+	 * Create a new instance of {@code Organization}
 	 *
-	 * @param code
 	 * @param name
+	 *            the organization name.
 	 */
-	public Language(String code, String name) {
-		this.code = code;
+	public Organization(String name) {
 		this.name = name;
-	}
-
-	/**
-	 * @return the code
-	 */
-	public String getCode() {
-		return code;
 	}
 
 	/**
@@ -61,15 +53,8 @@ public class Language {
 	}
 
 	/**
-	 * @param code
-	 *            the code to set
-	 */
-	public void setCode(String id) {
-		this.code = id;
-	}
-
-	/**
-	 * @param id the id to set
+	 * @param id
+	 *            the id to set
 	 */
 	public void setId(Long id) {
 		this.id = id;
