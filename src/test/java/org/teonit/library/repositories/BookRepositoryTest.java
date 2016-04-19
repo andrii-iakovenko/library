@@ -28,7 +28,7 @@ public class BookRepositoryTest {
 	@Rollback(false)
 	public void setUp() {
 		Language en = new Language("en", "English");
-		Language uk = new Language("uk", "Ukrainian");
+		Language ua = new Language("ua", "Ukrainian");
 
 		Organization dummyPub = new Organization("Dummy Publishing");
 		Organization happyPub = new Organization("Happy Publishing");
@@ -49,7 +49,7 @@ public class BookRepositoryTest {
 		bookRepository.save(book);
 
 		book = new Book("Кобзар");
-		book.setInLanguage(uk);
+		book.setInLanguage(ua);
 		book.setPublisher(happyPub);
 		bookRepository.save(book);
 	}
